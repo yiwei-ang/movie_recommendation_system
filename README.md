@@ -22,7 +22,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/yiwei-ang/movie_recommendation_system.git
    ```
 2. Install relevant packages
    ```sh
