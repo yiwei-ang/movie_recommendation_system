@@ -24,12 +24,16 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/yiwei-ang/movie_recommendation_system.git
    ```
-2. Install relevant packages
+2. Build Docker image (Make sure you have Docker installed locally):
    ```sh
-   pip install requirement.txt
-   conda env create -f environment.yml
+   cd movie_recommendation_system
+   docker build -t {image_name} .
    ```
-   
+3. Run Jupyter in the Docker container:
+   ```sh
+   docker run -p 8888:8888 {image_name}
+   ```
+  
 <!-- CONTRIBUTING -->
 ## Contributing
 
