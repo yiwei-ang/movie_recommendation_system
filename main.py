@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-PROJECT_DIR = 'C:\\Users\\user\\Documents\\movie_recommendation_system\\'
+PROJECT_DIR = os.environ['PROJECT_DIR']
 
 # Import CountVectorizer and create the count matrix
 def load_model(model_csv):
@@ -43,7 +43,7 @@ def get_recommendations(title, model_csv, cosine_sim, indices):
 
 if __name__ == "__main__":
     print('Loading model...')
-    model_csv, cosine_sim, indices = load_model(pd.read_csv(PROJECT_DIR + '\\model\\model.csv'))
+    model_csv, cosine_sim, indices = load_model(pd.read_csv(PROJECT_DIR + '/model/model.csv'))
     print('Done loading model...')
     # An input is requested and stored in a variable
     input_title = input("Enter a movie title: ")

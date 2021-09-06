@@ -19,6 +19,7 @@ RUN conda config --set ssl_verify False
 RUN conda env update -f /root/environment.yml
 
 ENV PYTHONPATH=${PROJECT_DIR}:$PYTHONPATH
+COPY . ${PROJECT_DIR}
 
 WORKDIR ${PROJECT_DIR}
 EXPOSE 8888
