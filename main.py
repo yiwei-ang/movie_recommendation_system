@@ -43,7 +43,7 @@ def get_recommendations(title, model_csv, cosine_sim, indices):
 
 if __name__ == "__main__":
     print('Loading model...')
-    model_csv, cosine_sim, indices = load_model(pd.read_csv(PROJECT_DIR + '/model/model.csv'))
+    model_csv, cosine_sim, indices = load_model(pd.read_csv(PROJECT_DIR + 'model/model.csv'))
     print('Done loading model...')
     # An input is requested and stored in a variable
     input_title = input("Enter a movie title: ")

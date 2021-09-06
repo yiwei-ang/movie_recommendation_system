@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 PROJECT_DIR = os.environ['PROJECT_DIR']
-df_movie, df_credits = pd.read_csv(PROJECT_DIR + '/dataset/' + ['tmdb_5000_movies.csv', 'tmdb_5000_credits.csv'])
+df_movie, df_credits = pd.read_csv(PROJECT_DIR + 'dataset/' + ['tmdb_5000_movies.csv', 'tmdb_5000_credits.csv'])
 
 df_credits.rename(columns={'movie_id': 'id'}, inplace=True)
 df_movie = df_movie.merge(df_credits, on='id')
